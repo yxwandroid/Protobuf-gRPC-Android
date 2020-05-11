@@ -1,5 +1,7 @@
 package com.xuexiang.protobufdemo.grpc;
 
+import com.xuexiang.protobufdemo.BackendInterceptor;
+
 import java.io.InputStream;
 import java.util.concurrent.TimeUnit;
 
@@ -46,7 +48,7 @@ public final class gRPCChannelUtils {
      * @return
      */
     public static ManagedChannel newChannel(String host, int port) {
-        return ManagedChannelBuilder.forAddress(host, port)
+        return ManagedChannelBuilder.forAddress(host, port).intercept(new BackendInterceptor())
                 .usePlaintext()
                 .build();
     }

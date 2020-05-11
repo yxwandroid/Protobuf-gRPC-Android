@@ -56,7 +56,7 @@ import static com.xuexiang.xaop.consts.PermissionConsts.STORAGE;
 @Page(name = "XHttpApi-gRPC测试")
 public class XHttpApiTestFragment extends XPageFragment {
 
-    private static final int PORT = 8999;
+    private static final int PORT = 50051;
 
     private static final int REQUEST_CODE_SELECT_FILE1 = 1000;
     private static final int REQUEST_CODE_SELECT_FILE2 = 1001;

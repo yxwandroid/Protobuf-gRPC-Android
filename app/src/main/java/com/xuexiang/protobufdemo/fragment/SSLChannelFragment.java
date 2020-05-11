@@ -95,7 +95,7 @@ public class SSLChannelFragment extends XPageFragment {
 
         //开始网络请求
         //构建通道,设置CA证书
-        // final ManagedChannel channel = gRPCChannelUtils.newSSLChannel(host, port, authority, ca证书);
+//         final ManagedChannel channel = gRPCChannelUtils.newSSLChannel(host, port, authority, ca证书);
         final ManagedChannel channel = gRPCChannelUtils.newChannel(host, port);
         //构建服务api代理
         mStub = GreeterGrpc.newStub(channel);
